@@ -13,4 +13,4 @@ A project made using Python and OpenCV by which we can draw lines and shapes on 
 
 ### Demo
 
-![demo](https://github.com/MashyBasker/bash-scripts/blob/main/demo.mp4)
+<video src="assets/demo.mp4" controls="controls">
