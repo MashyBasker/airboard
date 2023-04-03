@@ -12,5 +12,3 @@ A project made using Python and OpenCV by which we can draw lines and shapes on 
 *So far the [CSRT](https://arxiv.org/pdf/1611.08461.pdf) algorithm provides the best accuracy*
 
 ### Demo
-
-<video src="https://github.com/MashyBasker/airboard/blob/main/assets/demo.mp4" controls="controls"></video>
