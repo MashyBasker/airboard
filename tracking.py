@@ -6,7 +6,7 @@ import sys
 class Tracker:
 
     def __init__(self):
-        self.__contours = []
+        pass
     
     # create a box around a red area which will act as the airboard pen
     def make_box(self, frame) -> tuple:
@@ -44,7 +44,7 @@ class Tracker:
 
 
     # tracks the boxed area in the video
-    def track_object(self, check, frm, tracker):
+    def track_object(self, check, frm, tracker, __contours):
         """
         @params:    video object, tracker instance
         @return:    None 
@@ -52,17 +52,23 @@ class Tracker:
         if not check:
             sys.exit()
 
-        # timer = cv2.getTickcount()
+        print(__contours)
         ok, bbox = tracker.update(frm)      # box area around tracking object
         mid_point = self.get_box_mid(bbox)  # get the midpoint of that box
-        # fps = cv2.getTickFrequency() / (cv2.getTickCount - timer)
+        print(mid_point)
 
         if ok:
-            a = [mid_point[0], mid_point[1]]
+            a = [int(mid_point[0]), int(mid_point[1])]
             k = []
-            self.__contours.append(k.copy())
-            self.__contours = np.array(self.__contours)
-            cv2.drawContours(frm, self.__contours, -1, (0, 255, 0), 3)
+            k.append(a)
+            __contours.append(k.copy())
+            __contours = np.array(__contours)
+            p1 = (int(bbox[0]), int(bbox[1]))
+            p2 = (int(bbox[0] + bbox[2]), int(bbox[1] + bbox[3]))
+            cv2.rectangle(frm, p1, p2, (255,0,0), 2)
+            print(type(__contours))
+            print(__contours.shape)
+            cv2.drawContours(frm, __contours, -1, (0, 255, 0), 3)
         else:
             cv2.putText(frm, "Tracking failure detected", (100, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 2)
 
