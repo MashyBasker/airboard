@@ -1,3 +1,6 @@
+
+
+
 # AIRBOARD
 
 A project made using Python and OpenCV by which we can draw lines and shapes on the screen by moving a red object on the screen.
@@ -13,4 +16,10 @@ A project made using Python and OpenCV by which we can draw lines and shapes on 
 
 ### Demo
 
-<video src="https://github.com/MashyBasker/airboard/blob/main/assets/demo.mp4" controls="controls"></video>
+
+
+
+
+https://user-images.githubusercontent.com/84385565/229475582-eed894a1-cb81-4587-86a6-1f1b32ee083c.mp4
+
+
