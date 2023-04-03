@@ -13,4 +13,4 @@ A project made using Python and OpenCV by which we can draw lines and shapes on 
 
 ### Demo
 
-<img src="assets/screencast.gif" alt="demo" width="600px" height="400px">
+<video src="assets/screencast.mp4" controls="controls" width="600px"></video>
